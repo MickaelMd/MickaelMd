@@ -29,7 +29,7 @@
 ###
 
 <details>
-  <summary><b>:hourglass_flowing_sand: &nbsp; learning</b></summary>
+  <summary><b>:hourglass_flowing_sand: learning</b></summary>
 <br/ >
   <div align="left">
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="40" alt="html5 logo" />
