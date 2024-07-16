@@ -9,11 +9,9 @@
 <p align="left">💻 Currently in Training</p>
 
 ###
-
-<h3 align="left">🛠 Tools</h3>
-
-###
 <details>
+   <summary><b>🛠 Tools</b></summary>
+  <br/ >
 <div align="left">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" height="35" alt="figma logo"  />
   <img width="12" />
