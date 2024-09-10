@@ -5,6 +5,7 @@
 | `/^\d+$/` | Correspond à une chaîne de caractères contenant uniquement des chiffres. |
 | `/^[a-zA-Z]+$/` | Correspond à une chaîne de caractères contenant uniquement des lettres (majuscule ou minuscule). |
 | `/^[a-z0-9_]+$/i` | Correspond à une chaîne de caractères contenant uniquement des lettres, chiffres et underscores (insensible à la casse). |
+| `/^[a-zA-Z0-9]{8,}$/` | Correspond à une chaîne de caractères contenant uniquement des lettres, chiffres et contenant au moins 8 caractères (uniquement des lettres et des chiffres) |
 | `/^[\w-]+$/` | Correspond à une chaîne de caractères contenant uniquement des lettres, chiffres, underscores et tirets. |
 | `/^[\d]{3}-[\d]{2}-[\d]{4}$/` | Correspond à un numéro de sécurité sociale américain (format XXX-XX-XXXX). |
 | `/^(\d{4})-(\d{2})-(\d{2})$/` | Correspond à une date au format YYYY-MM-DD. |
