@@ -29,7 +29,7 @@
 | `/^(?:[0-9A-Fa-f]{1,4}:){7}[0-9A-Fa-f]{1,4}$/` | Correspond à une adresse IP au format IPv6 (non-compressée). |
 | `/^(?:0x)?[0-9A-Fa-f]+$/` | Correspond à une chaîne hexadécimale (avec ou sans préfixe "0x"). |
 | `/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/` | Correspond à un mot de passe contenant au moins une lettre, un chiffre, et ayant au moins 8 caractères. |
-| `/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d!@#$%^&*{}]{8,}$/`  | Correspond à un mot de passe contenant au moins une lettre, un chiffre, et ayant au moins 8 caractères avec l'option d'avoir des caractères spéciaux. |
+| `/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d!?@#$%^&*{}]{8,}$/`  | Correspond à un mot de passe contenant au moins une lettre, un chiffre, et ayant au moins 8 caractères avec l'option d'avoir des caractères spéciaux. |
 | `/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/` | Correspond à un mot de passe complexe avec lettres majuscules, minuscules, chiffres, et caractères spéciaux (au moins 8 caractères). |
 | `/^\d{1,2}\/\ d{1,2}/\d{2}$/` | Correspond à une date au format DD/MM/YY (sur deux chiffres). |
 | `/^([a-z0-9]+[-_]){2,}[a-z0-9]+$/i` | Correspond à un nom d'utilisateur avec au moins deux segments séparés par des tirets ou underscores. |
