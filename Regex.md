@@ -13,6 +13,7 @@
 | `/^\S+@\S+\.\S+$/` | Correspond à une adresse email simple (ne vérifie pas la validité complète). |
 | `/^(https?:\/\/)?([a-z0-9\-\.]+)\.([a-z]{2,6})(\/[\w\.-]*)*\/?$/i` | Correspond à une URL de base (http ou https, avec un domaine et un chemin optionnel). |
 | `/^(\+?\d{1,4}[\s-])?(?!0+\s,?\d)([2-9]\d{2}[\s-]?\d{3}[\s-]?\d{4})(\s?(x\|ext)\d{1,5})?$/` | Correspond à un numéro de téléphone international avec extension optionnelle. |
+| `/^((\+33\s?\|0033\s?)?[1-9]\d{8}\|0[1-9]\d` | Correspond à un numéro de téléphone français avec et sans le préfixe international |
 | `/^[01]?[0-9]\|2[0-3]:[0-5][0-9]$/` | Correspond à un format d'heure valide (HH:MM, 24 heures). |
 | `/^[0-9a-fA-F]{32}$/` | Correspond à un hash MD5 (32 caractères hexadécimaux). |
 | `/^[A-Z0-9]{8}-[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{12}$/i` | Correspond à un UUID (Universally Unique Identifier) de version 4. |
