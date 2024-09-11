@@ -10,7 +10,7 @@
 | `/^[\d]{3}-[\d]{2}-[\d]{4}$/` | Correspond à un numéro de sécurité sociale américain (format XXX-XX-XXXX). |
 | `/^(\d{4})-(\d{2})-(\d{2})$/` | Correspond à une date au format YYYY-MM-DD. |
 | `/^[A-Z][a-z]+\s[A-Z][a-z]+$/` | Correspond à un nom complet au format "Prénom Nom" avec des lettres majuscules initiales. |
-| `/^\S+@\S+\.\S+$/` | Correspond à une adresse email simple (ne vérifie pas la validité complète). |
+| `/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/` | Correspond à une adresse email simple. |
 | `/^(https?:\/\/)?([a-z0-9\-\.]+)\.([a-z]{2,6})(\/[\w\.-]*)*\/?$/i` | Correspond à une URL de base (http ou https, avec un domaine et un chemin optionnel). |
 | `/^(\+?\d{1,4}[\s-])?(?!0+\s,?\d)([2-9]\d{2}[\s-]?\d{3}[\s-]?\d{4})(\s?(x\|ext)\d{1,5})?$/` | Correspond à un numéro de téléphone international avec extension optionnelle. |
 | `/^((\+33\s?\|0033\s?)?[1-9]\d{8}\|0[1-9]\d` | Correspond à un numéro de téléphone français avec et sans le préfixe international |
