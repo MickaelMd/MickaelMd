@@ -57,3 +57,76 @@ Ne pas oublier d'ajouter ton fichier `.env` dans le fichier `.gitignore` si tu u
     .env
 
 Avec cette configuration, tu seras capable de gérer tes configurations d'application via des variables d'environnement dans PHP.
+
+&nbsp;  
+&nbsp;  
+___
+&nbsp;  
+&nbsp;  
+
+Utilisation du fichier `.env` avec Symfony
+==========================================
+
+Dans Symfony, la gestion des variables d'environnement via un fichier `.env` est intégrée de base. Voici comment cela fonctionne :
+
+1\. Le fichier `.env`
+---------------------
+
+Lorsque tu crées un projet Symfony, un fichier `.env` est généré automatiquement à la racine du projet. Ce fichier contient déjà certaines variables d'environnement par défaut. Voici un exemple de ce que tu peux y trouver :
+
+    # Exemple de configuration dans un fichier .env
+    APP_ENV=dev
+    APP_SECRET=some_random_value
+    DATABASE_URL="mysql://root:password@127.0.0.1:3306/nom_de_la_base?serverVersion=5.7"
+
+2\. Accès aux variables d'environnement
+---------------------------------------
+
+Les variables définies dans le fichier `.env` sont automatiquement chargées par Symfony. Dans ton code Symfony, tu peux y accéder via `$_ENV` ou en utilisant `getenv()`.
+
+3\. Utilisation des variables dans les fichiers de configuration
+----------------------------------------------------------------
+
+Symfony te permet également d'utiliser les variables d'environnement directement dans les fichiers de configuration YAML. Par exemple, voici comment tu pourrais utiliser la variable `DATABASE_URL` dans le fichier `config/packages/doctrine.yaml` :
+
+    doctrine:
+        dbal:
+            url: '%env(resolve:DATABASE_URL)%'
+
+4\. Fichiers `.env` spécifiques aux environnements
+--------------------------------------------------
+
+Symfony supporte plusieurs fichiers `.env` pour différents environnements. Par exemple :
+
+*   `.env` : Configuration par défaut pour tous les environnements.
+*   `.env.local` : Surcharges pour ton environnement local.
+*   `.env.prod` : Spécifique à l'environnement de production.
+
+5\. Système de cache
+--------------------
+
+En production, Symfony met en cache les variables d'environnement dans un fichier `.env.local.php` pour éviter de lire le fichier `.env` à chaque requête, améliorant ainsi les performances.
+
+6\. Exemple d'utilisation dans un contrôleur Symfony
+----------------------------------------------------
+
+Voici un exemple d'utilisation des variables d'environnement dans un contrôleur Symfony :
+
+    // Dans un contrôleur Symfony
+    namespace App\Controller;
+    
+    use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+    use Symfony\Component\HttpFoundation\Response;
+    
+    class MyController extends AbstractController
+    {
+        public function index(): Response
+        {
+            // Accéder à une variable d'environnement (par exemple, APP_ENV)
+            $appEnv = $_ENV['APP_ENV'];
+    
+            return new Response("L'environnement de l'application est : " . $appEnv);
+        }
+    }
+
+Ainsi, avec Symfony, tout est déjà en place pour gérer facilement tes variables d'environnement via le fichier `.env`.
