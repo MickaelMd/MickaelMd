@@ -1,3 +1,26 @@
+Qu'est-ce que le fichier .env ?
+-------------------------------
+
+Le fichier `.env` est un fichier de configuration utilisé pour stocker des variables d'environnement dans les applications. Il est souvent utilisé dans le développement d'applications web pour gérer des informations sensibles et des paramètres de configuration sans les inclure directement dans le code source.
+
+### Définition
+
+Un fichier `.env` contient des paires clé-valeur qui définissent des variables d'environnement. Ces variables peuvent inclure des informations telles que les identifiants de base de données, les clés API, les mots de passe et d'autres paramètres nécessaires au bon fonctionnement de l'application.
+
+### Comment ça fonctionne :
+
+1.  Lors du démarrage de l'application, une bibliothèque de gestion des environnements (comme `dotenv` en PHP ou Node.js) charge les variables définies dans le fichier `.env`.
+2.  Ces variables peuvent ensuite être accédées dans le code de l'application, permettant aux développeurs de personnaliser le comportement de l'application en fonction de l'environnement (développement, production, etc.).
+3.  Le fichier `.env` est généralement exclu du contrôle de version (par exemple, via un fichier `.gitignore`) pour protéger les informations sensibles.
+
+### Conséquences
+
+L'utilisation d'un fichier `.env` permet de séparer la configuration de l'application du code, ce qui améliore la sécurité et la flexibilité. Cela aide également à éviter les fuites d'informations sensibles dans les dépôts de code source.
+
+&nbsp;  
+___
+&nbsp;  
+
 Installer et utiliser un fichier .env en JavaScript (Node.js)
 =============================================================
 
