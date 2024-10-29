@@ -59,9 +59,7 @@ Ne pas oublier d'ajouter ton fichier `.env` dans le fichier `.gitignore` si tu u
 Avec cette configuration, tu seras capable de gérer tes configurations d'application via des variables d'environnement dans PHP.
 
 &nbsp;  
-&nbsp;  
 ___
-&nbsp;  
 &nbsp;  
 
 Utilisation du fichier `.env` avec Symfony
