@@ -45,16 +45,19 @@ Tu peux installer la bibliothèque `dotenv` à l'aide de npm avec la commande su
 
 À la racine de ton projet, crée un fichier nommé `.env`. Ce fichier contiendra tes variables d'environnement. Par exemple :
 
+```js
     DB_HOST=localhost
     DB_PORT=3306
     DB_DATABASE=nom_de_la_base
     DB_USERNAME=root
     DB_PASSWORD=mot_de_passe
+```
 
 ### 4\. Charger les variables d'environnement dans ton projet Node.js :
 
 Dans ton fichier JavaScript principal (par exemple, `index.js`), tu dois charger et utiliser les variables de ton fichier `.env`. Voici un exemple de code :
 
+```js
     // Charger les variables d'environnement depuis le fichier .env
     require('dotenv').config();
     
@@ -66,17 +69,21 @@ Dans ton fichier JavaScript principal (par exemple, `index.js`), tu dois charger
     const dbPassword = process.env.DB_PASSWORD;
     
     console.log(`Connexion à la base de données : ${dbName} sur ${dbHost}:${dbPort} avec l'utilisateur ${dbUser}`);
+```
 
 ### 5\. Accéder aux variables d'environnement :
 
 Les variables d'environnement dans un projet Node.js sont accessibles via `process.env`. Par exemple, pour accéder à la variable `DB_HOST`, tu peux utiliser :
 
+```js
     console.log(process.env.DB_HOST);
+```
 
 ### Attention :
 
 Ne pas oublier d'ajouter ton fichier `.env` dans le fichier `.gitignore` pour éviter de partager des informations sensibles comme les mots de passe :
-
+```js
     .env
+```
 
 Avec cette configuration, tu seras capable de gérer tes configurations d'application via des variables d'environnement dans un projet Node.js.
