@@ -53,6 +53,7 @@ Dans ton projet, ouvre un terminal à la racine de ton projet et exécute la com
 
 Dans ton fichier PHP principal (par exemple, `index.php`), tu dois charger et utiliser les variables de ton fichier `.env`. Voici un exemple de code :
 
+```php
     <?php
     require 'vendor/autoload.php';
     
@@ -65,14 +66,15 @@ Dans ton fichier PHP principal (par exemple, `index.php`), tu dois charger et ut
     // Utiliser une variable d'environnement
     $dbHost = $_ENV['DB_HOST'];
     $dbPort = $_ENV['DB_PORT'];
+```
 
 ### 5\. Accéder aux variables d'environnement :
 
 Une fois le fichier `.env` chargé, tu peux accéder aux variables définies via `$_ENV` ou `getenv()` :
-
+```php
     echo $_ENV['DB_DATABASE']; // ou
     echo getenv('DB_DATABASE');
-
+```
 ### Attention :
 
 Ne pas oublier d'ajouter ton fichier `.env` dans le fichier `.gitignore` si tu utilises Git, pour éviter de partager des informations sensibles (comme les mots de passe) :
@@ -94,11 +96,12 @@ Dans Symfony, la gestion des variables d'environnement via un fichier `.env` est
 ---------------------
 
 Lorsque tu crées un projet Symfony, un fichier `.env` est généré automatiquement à la racine du projet. Ce fichier contient déjà certaines variables d'environnement par défaut. Voici un exemple de ce que tu peux y trouver :
-
+```php
     # Exemple de configuration dans un fichier .env
     APP_ENV=dev
     APP_SECRET=some_random_value
     DATABASE_URL="mysql://root:password@127.0.0.1:3306/nom_de_la_base?serverVersion=5.7"
+```
 
 2\. Accès aux variables d'environnement
 ---------------------------------------
@@ -133,6 +136,7 @@ En production, Symfony met en cache les variables d'environnement dans un fichie
 
 Voici un exemple d'utilisation des variables d'environnement dans un contrôleur Symfony :
 
+```php
     // Dans un contrôleur Symfony
     namespace App\Controller;
     
@@ -149,5 +153,6 @@ Voici un exemple d'utilisation des variables d'environnement dans un contrôleur
             return new Response("L'environnement de l'application est : " . $appEnv);
         }
     }
+```
 
 Ainsi, avec Symfony, tout est déjà en place pour gérer facilement tes variables d'environnement via le fichier `.env`.
