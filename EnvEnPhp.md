@@ -43,11 +43,13 @@ Dans ton projet, ouvre un terminal à la racine de ton projet et exécute la com
 
 À la racine de ton projet, crée un fichier nommé `.env`. Dans ce fichier, tu peux définir des variables d'environnement, par exemple :
 
+```php
     DB_HOST=localhost
     DB_PORT=3306
     DB_DATABASE=nom_de_la_base
     DB_USERNAME=root
     DB_PASSWORD=mot_de_passe
+```
 
 ### 4\. Charger les variables d'environnement dans ton projet PHP :
 
