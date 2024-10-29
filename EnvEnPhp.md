@@ -115,9 +115,11 @@ Les variables définies dans le fichier `.env` sont automatiquement chargées pa
 
 Symfony te permet également d'utiliser les variables d'environnement directement dans les fichiers de configuration YAML. Par exemple, voici comment tu pourrais utiliser la variable `DATABASE_URL` dans le fichier `config/packages/doctrine.yaml` :
 
+```yaml
     doctrine:
         dbal:
             url: '%env(resolve:DATABASE_URL)%'
+```
 
 4\. Fichiers `.env` spécifiques aux environnements
 --------------------------------------------------
