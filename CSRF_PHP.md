@@ -1,3 +1,27 @@
+Qu'est-ce que le CSRF ?
+======================
+
+Le CSRF (Cross-Site Request Forgery) est une vulnérabilité de sécurité qui permet à un attaquant d'exécuter des actions non autorisées sur un site web au nom d'un utilisateur authentifié.
+
+### Définition
+
+Le CSRF est une attaque où un utilisateur malveillant exploite la session active d'un utilisateur sur un site web pour envoyer des requêtes non désirées à ce site. Cela peut se produire lorsqu'un utilisateur est connecté à un site et qu'il visite simultanément un site malveillant qui tente d'exécuter des actions sur le premier site.
+
+### Comment ça fonctionne :
+
+1.  L'utilisateur se connecte à un site légitime (par exemple, un site bancaire) et obtient un cookie de session.
+2.  Ensuite, l'utilisateur visite un site malveillant qui contient un code (comme une image ou un script) conçu pour envoyer une requête au site légitime.
+3.  Étant donné que l'utilisateur est déjà authentifié, le site légitime interprète la requête comme provenant de l'utilisateur et exécute l'action sans vérification.
+
+### Conséquences
+
+Les attaques CSRF peuvent entraîner des actions non intentionnelles, comme le transfert d'argent, la modification de paramètres de compte ou même la suppression de données.
+
+
+&nbsp;  
+___
+&nbsp;  
+
 
 Protection CSRF en PHP
 ======================
