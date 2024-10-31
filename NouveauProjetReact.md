@@ -9,11 +9,11 @@ Voici les étapes à suivre. Assurez-vous d'abord d'avoir installé Node.js et n
 
 Cette commande va créer un dossier contenant tous les fichiers nécessaires pour démarrer un projet React. Remplacez "nom-du-projet" par le nom de votre application.
 
-La commande 
+#### La commande 
 
-`npx create-react-app mon-projet --template blank` 
+    npx create-react-app mon-projet --template blank 
 
-va créer un projet React avec une structure minimaliste. Contrairement au modèle par défaut, ce modèle "blank" ne contient que les fichiers de base pour démarrer avec React, sans les éléments de démo comme le logo ou les styles CSS.
+Va créer un projet React avec une structure minimaliste. Contrairement au modèle par défaut, ce modèle "blank" ne contient que les fichiers de base pour démarrer avec React, sans les éléments de démo comme le logo ou les styles CSS.
 
 
 ### Naviguer dans le dossier du projet :
