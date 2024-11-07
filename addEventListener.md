@@ -375,3 +375,230 @@ document.addEventListener('drop', function() {
 });
   
 ```
+
+
+### Événements réseau
+
+**online :** Se déclenche lorsque l'appareil passe en ligne.
+
+```js
+
+window.addEventListener('online', function() {
+  console.log('Appareil en ligne');
+});
+  
+```
+
+**offline :** Se déclenche lorsque l'appareil passe hors ligne.
+
+```js
+
+window.addEventListener('offline', function() {
+  console.log('Appareil hors ligne');
+});
+  
+```
+
+### Événements liés aux animations et transitions CSS
+
+**transitionstart :** Se déclenche au début d'une transition CSS.
+
+```js
+
+document.getElementById('element').addEventListener('transitionstart', function() {
+  console.log('Transition commencée');
+});
+  
+```
+
+**transitionend :** Se déclenche à la fin d'une transition CSS.
+
+```js
+
+document.getElementById('element').addEventListener('transitionend', function() {
+  console.log('Transition terminée');
+});
+  
+```
+
+**animationstart :** Se déclenche au début d'une animation CSS.
+
+```js
+
+document.getElementById('element').addEventListener('animationstart', function() {
+  console.log('Animation commencée');
+});
+  
+```
+
+**animationend :** Se déclenche à la fin d'une animation CSS.
+
+```js
+
+document.getElementById('element').addEventListener('animationend', function() {
+  console.log('Animation terminée');
+});
+  
+```
+
+**animationiteration :** Se déclenche à chaque itération d'une animation CSS.
+
+```js
+
+document.getElementById('element').addEventListener('animationiteration', function() {
+  console.log('Nouvelle itération d\'animation');
+});
+  
+```
+
+### Autres événements divers
+
+**contextmenu :** Se déclenche lorsqu'un utilisateur fait un clic droit pour ouvrir le menu contextuel.
+
+```js
+
+document.getElementById('element').addEventListener('contextmenu', function(e) {
+  e.preventDefault(); // Pour désactiver le menu contextuel par défaut
+  console.log('Menu contextuel ouvert');
+});
+  
+```
+
+**copy, cut, paste :** Se déclenchent respectivement lors de la copie, la coupe, et le collage de contenu.
+
+```js
+
+document.getElementById('element').addEventListener('copy', function() {
+  console.log('Contenu copié');
+});
+
+document.getElementById('element').addEventListener('cut', function() {
+  console.log('Contenu coupé');
+});
+
+document.getElementById('element').addEventListener('paste', function() {
+  console.log('Contenu collé');
+});
+  
+```
+
+**visibilitychange :** Se déclenche lorsque la visibilité de la page change (par exemple, lorsqu'un utilisateur change d'onglet).
+
+```js
+
+document.addEventListener('visibilitychange', function() {
+  console.log(document.visibilityState);
+});
+  
+```
+
+### Événements liés aux médias
+
+**play :** Se déclenche lorsque la lecture d'un média commence.
+
+```js
+
+document.getElementById('media').addEventListener('play', function() {
+  console.log('Lecture commencée');
+});
+  
+```
+
+**pause :** Se déclenche lorsque la lecture d'un média est mise en pause.
+
+```js
+
+document.getElementById('media').addEventListener('pause', function() {
+  console.log('Lecture mise en pause');
+});
+  
+```
+
+**ended :** Se déclenche lorsque la lecture d'un média est terminée.
+
+```js
+
+document.getElementById('media').addEventListener('ended', function() {
+  console.log('Lecture terminée');
+});
+  
+```
+
+**volumechange :** Se déclenche lorsque le volume d'un média est modifié.
+
+```js
+
+document.getElementById('media').addEventListener('volumechange', function() {
+  console.log('Volume changé');
+});
+  
+```
+
+### Événements liés aux éléments personnalisés (Web Components)
+
+**connectedCallback :** Se déclenche lorsqu'un élément personnalisé est ajouté au DOM.
+
+```js
+
+class CustomElement extends HTMLElement {
+  connectedCallback() {
+    console.log('Élément ajouté au DOM');
+  }
+}
+customElements.define('custom-element', CustomElement);
+  
+```
+
+**disconnectedCallback :** Se déclenche lorsqu'un élément personnalisé est retiré du DOM.
+
+```js
+
+class CustomElement extends HTMLElement {
+  disconnectedCallback() {
+    console.log('Élément retiré du DOM');
+  }
+}
+customElements.define('custom-element', CustomElement);
+  
+```
+
+### Événements de mutation (MutationObserver)
+
+**MutationObserver :** Pour observer des modifications du DOM.
+
+```js
+
+const observer = new MutationObserver((mutationsList) => {
+  mutationsList.forEach((mutation) => {
+    console.log('Mutation détectée:', mutation);
+  });
+});
+
+observer.observe(document.getElementById('element'), { attributes: true, childList: true, subtree: true });
+  
+```
+
+### Événements de données (WebSocket ou serveurs de données)
+
+**message :** Se déclenche lorsque des données sont reçues via un WebSocket.
+
+```js
+
+const socket = new WebSocket('wss://example.com/socket');
+socket.addEventListener('message', function(event) {
+  console.log('Message reçu:', event.data);
+});
+  
+```
+
+### Autres événements de document
+
+**fullscreenchange :** Se déclenche lorsque la page passe en mode plein écran ou en sort.
+
+```js
+
+document.addEventListener('fullscreenchange', function() {
+  console.log('Mode plein écran changé');
+});
+  
+```
