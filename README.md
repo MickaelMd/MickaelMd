@@ -6,7 +6,7 @@
 
 ###
 
-<p align="left">💻 Currently in Training</p>
+<p align="left">💻 I'm currently learning</p>
 
 ###
 <details>
