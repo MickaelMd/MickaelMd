@@ -234,3 +234,79 @@ fetch("https://jsonplaceholder.typicode.com/posts")
 *   **Structure de la réponse :** Dans le premier exemple, la réponse est un objet unique, donc `for...in` est plus approprié pour accéder à chaque propriété. Dans le second exemple, la réponse est un tableau d'objets, donc `forEach` est plus approprié pour accéder à chaque élément du tableau.
 
 En résumé, la méthode de parcours dépend du type de données retournées par l'API : un objet pour `for...in` et un tableau pour `forEach`.
+
+
+&nbsp;  
+___
+&nbsp;  
+
+
+# Fetch avec async/await
+
+## Introduction
+
+Avec l'introduction de `async/await`, le code basé sur `fetch()` devient plus lisible et facile à maintenir.
+
+## Exemple avec `async/await`
+
+```javascript
+
+async function fetchData() {
+  try {
+    const response = await fetch('https://api.example.com/data');
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    const data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.error('Erreur lors de la récupération des données :', error.message);
+  }
+}
+
+fetchData();
+```
+
+Dans cet exemple, une requête GET est effectuée pour récupérer des données depuis une API. Si une erreur survient (comme un problème réseau ou un statut HTTP non valide), elle est capturée par le bloc `catch`.
+
+## Avantages de `async/await`
+
+*   **Lisibilité :** Le code est linéaire et facile à suivre, proche d'une structure synchrone.
+*   **Gestion des erreurs centralisée :** Utilisation de `try...catch` pour regrouper la gestion des erreurs.
+*   **Idéal pour les logiques complexes :** Simplifie les fonctions longues impliquant plusieurs étapes asynchrones.
+
+## Exemple avancé : Requête POST avec options
+
+```javascript
+
+async function postData() {
+  try {
+    const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        title: 'foo',
+        body: 'bar',
+        userId: 1,
+      }),
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    console.log('Données créées :', data);
+  } catch (error) {
+    console.error('Erreur lors de la création des données :', error.message);
+  }
+}
+
+postData();
+```
+
+Ici, une requête POST est envoyée à une API avec un corps de requête JSON. Les options comme `method`, `headers` et `body` permettent de personnaliser la requête.
+
+Cette présentation montre comment utiliser efficacement `fetch()` avec `async/await` pour simplifier la gestion des requêtes HTTP en JavaScript.
