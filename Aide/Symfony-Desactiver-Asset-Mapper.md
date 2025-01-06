@@ -89,6 +89,9 @@ Si vous avez précédemment utilisé Asset Mapper, des fichiers résidus pourrai
 
 ## Alternatives : Utiliser Webpack Encore (Optionnel)
 
+> **Note** : Il est parfois nécessaire de réactiver `asset_mapper` pour pouvoir installer Webpack Encore.
+
+
 Si vous souhaitez une solution plus avancée pour gérer vos assets, comme le support de ES6+, SCSS ou la minification, utilisez Webpack Encore.
 
 ### Installation de Webpack Encore :
