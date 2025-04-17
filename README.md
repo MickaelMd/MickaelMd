@@ -49,6 +49,7 @@ Développeur web en formation **Concepteur Développeur d'Applications (CDA)** �
 - Tests unitaires & fonctionnels
 - Sécurité (PenTest, RGPD)
 - Architecture logicielle (UML, Merise)
+- API REST & communication client/serveur
 
 ---
 
