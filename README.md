@@ -7,7 +7,7 @@
 
 Développeur web en formation **Concepteur Développeur d'Applications (CDA)** à l’AFPA d’Amiens, passionné et curieux. À la recherche d’un **stage** pour mettre mes compétences en pratique, progresser et contribuer à des projets concrets.
 
-📅 Disponible de **15/09/2025 - 05/12/2025**  
+📅 Disponible du **15/09/2025 - 05/12/2025**  
 📍 Localisé à Amiens – Ouvert au télétravail / hybride
 
 ---
