@@ -64,7 +64,7 @@ Développeur web en formation **Concepteur Développeur d'Applications (CDA)** �
 
 ## ⚡ Centres d’intérêt
 
-🎸 Musique | 🎮 Jeux vidéo | ♟️ Échecs | 💻 Technologie
+🎸 Musique | 🎮 Jeux vidéo | 💻 Technologie
 
 ---
 
