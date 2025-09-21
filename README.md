@@ -1,14 +1,11 @@
 <h1 align="center">Salut 👋, moi c'est Mickaël Marchand</h1>
-<p align="center">🎯 Développeur Web en formation | À la recherche d’un stage </p>
+<p align="center">🎯 Développeur Web en formation</p>
 
 ---
 
 ## 👨‍💻 À propos
 
-Développeur web en formation **Concepteur Développeur d'Applications (CDA)** à l’AFPA d’Amiens, passionné et curieux. À la recherche d’un **stage** pour mettre mes compétences en pratique, progresser et contribuer à des projets concrets.
-
-📅 Disponible du **15/09/2025 - 05/12/2025**  
-📍 Localisé à Amiens – Ouvert au télétravail / hybride
+Développeur web en formation **Concepteur Développeur d'Applications (CDA)** à l’AFPA d’Amiens.
 
 ---
 
